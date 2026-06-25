@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows / Linux
+Thumbs.db
+desktop.ini
+*~
+
+# Tooling local (Claude Code / editores)
+.claude/
+.vscode/
+.idea/
+
+# Secrets / entorno (nunca subir tokens ni API keys)
+.env
+.env.*
+*.local
+
+# Logs y temporales
+*.log
+npm-debug.log*
+tmp/
+.cache/
+
+# Dependencias (por si se agrega build)
+node_modules/
+
+# Artefactos generados por la demo (banner que crea el agente)
+# Coméntalo si quieres versionar el banner de ejemplo:
+assets/promo-banner.png

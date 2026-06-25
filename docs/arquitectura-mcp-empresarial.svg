@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="690" viewBox="0 0 1600 690" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="aN" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#1f3a5f"/></marker>
+    <marker id="aT" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#2f6f73"/></marker>
+    <marker id="aG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#2e7d6b"/></marker>
+    <marker id="aP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#6b4e9e"/></marker>
+    <marker id="aA" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto-start-reverse" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#6b4e9e"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="690" fill="#f5f7fa"/>
+  <text x="800" y="40" text-anchor="middle" font-size="27" font-weight="700" fill="#1f3a5f">Arquitectura MCP empresarial — Gateway · Registry · Federación</text>
+  <text x="800" y="63" text-anchor="middle" font-size="15" fill="#5a6b80">Ejemplo: "Banco Nova", plataforma de agentes financieros</text>
+
+  <!-- AGENTES -->
+  <text x="120" y="98" font-size="13" font-weight="700" fill="#3a5a8c">AGENTES (clientes MCP) — coordinan entre sí por A2A</text>
+  <g fill="#3a5a8c" stroke="#26406a">
+    <rect x="120" y="106" width="300" height="46" rx="9"/>
+    <rect x="460" y="106" width="300" height="46" rx="9"/>
+    <rect x="800" y="106" width="300" height="46" rx="9"/>
+    <rect x="1140" y="106" width="300" height="46" rx="9"/>
+  </g>
+  <g fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="270" y="134">Agente Antifraude</text>
+    <text x="610" y="134">Copiloto del Analista</text>
+    <text x="950" y="134">Agente de Soporte</text>
+    <text x="1290" y="134">Agente Conciliación</text>
+  </g>
+  <!-- A2A entre agentes -->
+  <g stroke="#6b4e9e" stroke-width="1.6" stroke-dasharray="5 4">
+    <line x1="422" y1="129" x2="458" y2="129" marker-start="url(#aA)" marker-end="url(#aA)"/>
+    <line x1="762" y1="129" x2="798" y2="129" marker-start="url(#aA)" marker-end="url(#aA)"/>
+    <line x1="1102" y1="129" x2="1138" y2="129" marker-start="url(#aA)" marker-end="url(#aA)"/>
+  </g>
+  <text x="440" y="122" text-anchor="middle" font-size="10" fill="#6b4e9e">A2A</text>
+  <text x="780" y="122" text-anchor="middle" font-size="10" fill="#6b4e9e">A2A</text>
+  <text x="1120" y="122" text-anchor="middle" font-size="10" fill="#6b4e9e">A2A</text>
+
+  <!-- agentes -> gateway -->
+  <g stroke="#1f3a5f" stroke-width="2">
+    <line x1="270" y1="152" x2="270" y2="212" marker-end="url(#aN)"/>
+    <line x1="610" y1="152" x2="610" y2="212" marker-end="url(#aN)"/>
+    <line x1="950" y1="152" x2="950" y2="212" marker-end="url(#aN)"/>
+    <line x1="1290" y1="152" x2="1290" y2="212" marker-end="url(#aN)"/>
+  </g>
+  <rect x="700" y="178" width="320" height="20" rx="10" fill="#e7edf5" stroke="#1f3a5f"/>
+  <text x="860" y="192" text-anchor="middle" font-size="11.5" fill="#1f3a5f">MCP · streamable HTTP + OAuth 2.1</text>
+
+  <!-- GATEWAY -->
+  <rect x="240" y="214" width="1120" height="80" rx="12" fill="#1f3a5f"/>
+  <text x="800" y="246" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">🚪 MCP GATEWAY  ·  endpoint único</text>
+  <text x="800" y="270" text-anchor="middle" font-size="12.5" fill="#bcd0ea">OAuth 2.1 PKCE  ·  ruteo  ·  políticas / guardrails  ·  rate-limit  ·  AUDITORÍA</text>
+
+  <!-- IdP -->
+  <rect x="56" y="220" width="166" height="68" rx="10" fill="#6b4e9e"/>
+  <text x="139" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">🔑 Identity</text>
+  <text x="139" y="268" text-anchor="middle" font-size="10.5" fill="#e6ddf3">OAuth 2.1 / Keycloak</text>
+  <line x1="222" y1="254" x2="240" y2="254" stroke="#6b4e9e" stroke-width="2" marker-end="url(#aP)"/>
+
+  <!-- Registry -->
+  <rect x="1378" y="220" width="192" height="68" rx="10" fill="#2f6f73"/>
+  <text x="1474" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">📒 Registry</text>
+  <text x="1474" y="266" text-anchor="middle" font-size="10" fill="#d7ecee">allowlist + descubrimiento</text>
+  <line x1="1378" y1="254" x2="1360" y2="254" stroke="#2f6f73" stroke-width="2" marker-end="url(#aT)"/>
+
+  <!-- gateway -> servers -->
+  <line x1="300" y1="294" x2="300" y2="334" stroke="#1f3a5f" stroke-width="2" marker-end="url(#aN)"/>
+  <text x="322" y="318" font-size="11" fill="#1f3a5f">ruta SOLO a servers aprobados · least-privilege</text>
+
+  <!-- SERVERS internos -->
+  <text x="120" y="330" font-size="13" font-weight="700" fill="#2e7d6b">MCP SERVERS internos</text>
+  <!-- recursivo (un server delega en otro) -->
+  <path d="M440 340 C 540 320, 780 320, 880 340" fill="none" stroke="#2e7d6b" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#aG)"/>
+  <text x="660" y="316" text-anchor="middle" font-size="10.5" fill="#2e7d6b">🔁 recursivo (un server delega en otro)</text>
+  <g fill="#2e7d6b" stroke="#1d5247">
+    <rect x="120" y="340" width="200" height="46" rx="8"/>
+    <rect x="340" y="340" width="200" height="46" rx="8"/>
+    <rect x="560" y="340" width="200" height="46" rx="8"/>
+    <rect x="780" y="340" width="200" height="46" rx="8"/>
+  </g>
+  <g fill="#ffffff" font-size="13.5" font-weight="600" text-anchor="middle">
+    <text x="220" y="368">Core Banking</text>
+    <text x="440" y="368">Ledger</text>
+    <text x="660" y="368">KYC / AML</text>
+    <text x="880" y="368">Data Warehouse</text>
+  </g>
+
+  <!-- SERVERS externos -->
+  <text x="120" y="404" font-size="13" font-weight="700" fill="#b8763a">MCP SERVERS externos (SaaS · remotos · OAuth)</text>
+  <g fill="#b8763a" stroke="#7a4a22">
+    <rect x="120" y="412" width="200" height="46" rx="8"/>
+    <rect x="340" y="412" width="200" height="46" rx="8"/>
+    <rect x="560" y="412" width="200" height="46" rx="8"/>
+    <rect x="780" y="412" width="200" height="46" rx="8"/>
+  </g>
+  <g fill="#ffffff" font-size="13.5" font-weight="600" text-anchor="middle">
+    <text x="220" y="440">Stripe</text>
+    <text x="440" y="440">Plaid</text>
+    <text x="660" y="440">Salesforce</text>
+    <text x="880" y="440">DocuSign</text>
+  </g>
+
+  <!-- FEDERACION (peer gateway) -->
+  <line x1="1180" y1="294" x2="1145" y2="338" stroke="#1f3a5f" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#aN)"/>
+  <text x="1205" y="320" font-size="10.5" fill="#1f3a5f">federación (hub-spoke)</text>
+  <rect x="1010" y="340" width="280" height="46" rx="9" fill="#3a5a8c" stroke="#26406a"/>
+  <text x="1150" y="368" text-anchor="middle" font-size="13.5" font-weight="600" fill="#ffffff">🌐 Gateway región EU (peer)</text>
+
+  <!-- FEATURES avanzadas (chips) -->
+  <text x="1300" y="404" font-size="13" font-weight="700" fill="#5a6b80">Features avanzadas del protocolo</text>
+  <g font-size="11.8" fill="#28323f">
+    <rect x="1010" y="412" width="560" height="40" rx="8" fill="#eef2f8" stroke="#6b4e9e"/>
+    <text x="1028" y="437">↩ Sampling — el server le pide una inferencia a TU LLM (bidireccional)</text>
+    <rect x="1010" y="460" width="560" height="40" rx="8" fill="#eef2f8" stroke="#b8763a"/>
+    <text x="1028" y="485">🙋 Elicitation — el server pide aprobación al usuario a mitad de la operación</text>
+    <rect x="1010" y="508" width="560" height="40" rx="8" fill="#eef2f8" stroke="#2e7d6b"/>
+    <text x="1028" y="533">🔁 Recursivo — un MCP server delega tareas en otros servers</text>
+  </g>
+
+  <!-- leyenda -->
+  <g font-size="12.5" fill="#28323f">
+    <rect x="120" y="588" width="20" height="14" rx="3" fill="#3a5a8c"/><text x="148" y="600">Agentes (clientes)</text>
+    <rect x="320" y="588" width="20" height="14" rx="3" fill="#1f3a5f"/><text x="348" y="600">Gateway</text>
+    <rect x="470" y="588" width="20" height="14" rx="3" fill="#2f6f73"/><text x="498" y="600">Registry</text>
+    <rect x="610" y="588" width="20" height="14" rx="3" fill="#6b4e9e"/><text x="638" y="600">Identity / A2A</text>
+    <rect x="780" y="588" width="20" height="14" rx="3" fill="#2e7d6b"/><text x="808" y="600">Servers internos</text>
+    <rect x="960" y="588" width="20" height="14" rx="3" fill="#b8763a"/><text x="988" y="600">Servers externos (SaaS)</text>
+  </g>
+  <text x="120" y="636" font-size="12.5" fill="#5a6b80">El gateway es el "chokepoint": el agente NO ve credenciales · el registry actúa como allowlist de supply-chain · OAuth 2.1 con least-privilege progresivo.</text>
+</svg>

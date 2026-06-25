@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#4b2e22"/>
+    </marker>
+    <marker id="arrowS" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2f6f73"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#b8753a"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8f2f2f"/>
+    </marker>
+    <marker id="arrowC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8f4a2f"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="700" fill="#fff8ee"/>
+  <text x="800" y="40" text-anchor="middle" font-size="28" font-weight="700" fill="#4b2e22">Orquestación de Agentes — Skills · MCP · Subagentes</text>
+  <text x="800" y="64" text-anchor="middle" font-size="15" fill="#8f4a2f">Ejemplo: "Aria", agente de operaciones de e-commerce — 10 skills · 10 MCP · subagentes</text>
+
+  <!-- ENTRADAS -->
+  <rect x="120" y="86" width="1360" height="54" rx="10" fill="#ead9c2" stroke="#8f4a2f"/>
+  <text x="800" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#4b2e22">📥 PROMPTS / EVENTOS  (Slack · Telegram · Email · Webhook)</text>
+  <text x="800" y="128" text-anchor="middle" font-size="12.5" fill="#5a4030">"reembolsa #1234" · "despliega v2.3" · "¿cayó el checkout?" · "onboarda ACME" · "reporte de ventas" · "ticket #88" · "agenda demo" · "campaña BF" · "concilia pagos" · "audita accesos"</text>
+
+  <line x1="660" y1="140" x2="660" y2="168" stroke="#4b2e22" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ORQUESTADOR -->
+  <rect x="300" y="168" width="720" height="64" rx="12" fill="#4b2e22"/>
+  <text x="660" y="195" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">🧠 ORQUESTADOR  (router de intención + contexto global)</text>
+  <text x="660" y="217" text-anchor="middle" font-size="12.5" fill="#f3dcc2">discovery: conoce las 10 skills por su description (~800 tokens) · activa solo la que matchea</text>
+
+  <!-- RULES -->
+  <rect x="1070" y="166" width="410" height="72" rx="10" fill="#ffffff" stroke="#8f2f2f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1275" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#8f2f2f">🚧 RULES / guardrails (qué NO)</text>
+  <text x="1275" y="210" text-anchor="middle" font-size="12" fill="#8f2f2f">no prod sin aprobación · no PII en logs</text>
+  <text x="1275" y="226" text-anchor="middle" font-size="12" fill="#8f2f2f">budget cap · sandbox · roles mínimos</text>
+  <line x1="1070" y1="202" x2="1026" y2="202" stroke="#8f2f2f" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowR)"/>
+
+  <line x1="660" y1="232" x2="660" y2="266" stroke="#4b2e22" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- SKILLS -->
+  <text x="120" y="262" font-size="14" font-weight="700" fill="#8f4a2f">SKILLS — playbooks (CÓMO)</text>
+  <!-- arco de composicion (triage -> deploy : rollback) -->
+  <path d="M800 308 C 750 286, 570 286, 520 308" fill="none" stroke="#8f4a2f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrowC)"/>
+  <text x="660" y="282" text-anchor="middle" font-size="11.5" fill="#8f4a2f">rollback ↺ (una skill llama a otra)</text>
+
+  <!-- fila 1 -->
+  <g fill="#f3dcc2" stroke="#8f4a2f">
+    <rect x="109" y="308" width="262" height="46" rx="8"/>
+    <rect x="389" y="308" width="262" height="46" rx="8"/>
+    <rect x="669" y="308" width="262" height="46" rx="8"/>
+    <rect x="949" y="308" width="262" height="46" rx="8"/>
+    <rect x="1229" y="308" width="262" height="46" rx="8"/>
+  </g>
+  <g fill="#3a2418" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="240" y="336">handle-refund</text>
+    <text x="520" y="336">deploy-release</text>
+    <text x="800" y="336">triage-incident</text>
+    <text x="1080" y="336">onboard-customer</text>
+    <text x="1360" y="336">weekly-report</text>
+  </g>
+  <!-- fila 2 -->
+  <g fill="#f3dcc2" stroke="#8f4a2f">
+    <rect x="109" y="366" width="262" height="46" rx="8"/>
+    <rect x="389" y="366" width="262" height="46" rx="8"/>
+    <rect x="669" y="366" width="262" height="46" rx="8"/>
+    <rect x="949" y="366" width="262" height="46" rx="8"/>
+    <rect x="1229" y="366" width="262" height="46" rx="8"/>
+  </g>
+  <g fill="#3a2418" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="240" y="394">support-reply</text>
+    <text x="520" y="394">schedule-meeting</text>
+    <text x="800" y="394">launch-campaign</text>
+    <text x="1080" y="394">reconcile-payments</text>
+    <text x="1360" y="394">security-audit</text>
+  </g>
+
+  <!-- flechas a capas inferiores -->
+  <line x1="470" y1="416" x2="470" y2="452" stroke="#2f6f73" stroke-width="2" marker-end="url(#arrowS)"/>
+  <text x="458" y="438" text-anchor="end" font-size="11.5" font-weight="700" fill="#2f6f73">usan (acceso)</text>
+  <line x1="1455" y1="416" x2="1455" y2="452" stroke="#b8753a" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowB)"/>
+  <text x="1442" y="438" text-anchor="end" font-size="11.5" font-weight="700" fill="#b8753a">delegan</text>
+
+  <!-- MCP -->
+  <text x="120" y="446" font-size="14" font-weight="700" fill="#2f6f73">MCP — conectores (qué PUEDE)</text>
+  <g fill="#2f6f73" stroke="#1c4446">
+    <rect x="120" y="458" width="185" height="44" rx="8"/>
+    <rect x="317" y="458" width="185" height="44" rx="8"/>
+    <rect x="514" y="458" width="185" height="44" rx="8"/>
+    <rect x="711" y="458" width="185" height="44" rx="8"/>
+    <rect x="908" y="458" width="185" height="44" rx="8"/>
+    <rect x="120" y="510" width="185" height="44" rx="8"/>
+    <rect x="317" y="510" width="185" height="44" rx="8"/>
+    <rect x="514" y="510" width="185" height="44" rx="8"/>
+    <rect x="711" y="510" width="185" height="44" rx="8"/>
+    <rect x="908" y="510" width="185" height="44" rx="8"/>
+  </g>
+  <g fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="212" y="485">Slack</text>
+    <text x="409" y="485">Gmail</text>
+    <text x="606" y="485">Calendar</text>
+    <text x="803" y="485">GitHub</text>
+    <text x="1000" y="485">Stripe</text>
+    <text x="212" y="537">Shopify</text>
+    <text x="409" y="537">Notion</text>
+    <text x="606" y="537">Linear</text>
+    <text x="803" y="537">Datadog</text>
+    <text x="1000" y="537">AWS</text>
+  </g>
+
+  <!-- SUBAGENTES -->
+  <text x="1140" y="446" font-size="14" font-weight="700" fill="#b8753a">SUBAGENTES (aislados)</text>
+  <g fill="#b8753a" stroke="#7a4a22">
+    <rect x="1140" y="458" width="360" height="44" rx="8"/>
+    <rect x="1140" y="510" width="360" height="44" rx="8"/>
+    <rect x="1140" y="562" width="360" height="44" rx="8"/>
+  </g>
+  <g fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">
+    <text x="1320" y="485">research-subagent</text>
+    <text x="1320" y="537">code-fix-subagent</text>
+    <text x="1320" y="589">data-analysis-subagent</text>
+  </g>
+
+  <!-- leyenda -->
+  <g font-size="12.5" fill="#4b2e22">
+    <rect x="120" y="628" width="20" height="14" rx="3" fill="#f3dcc2" stroke="#8f4a2f"/><text x="148" y="640">Skills = CÓMO</text>
+    <rect x="290" y="628" width="20" height="14" rx="3" fill="#2f6f73"/><text x="318" y="640">MCP = qué PUEDE</text>
+    <rect x="500" y="628" width="20" height="14" rx="3" fill="#b8753a"/><text x="528" y="640">Subagentes = trabajo aislado</text>
+    <rect x="770" y="628" width="20" height="14" rx="3" fill="#ffffff" stroke="#8f2f2f" stroke-dasharray="4 3"/><text x="798" y="640">Rules = qué NO</text>
+  </g>
+  <text x="120" y="672" font-size="12.5" fill="#5a4030">Progressive disclosure: el orquestador solo carga el SKILL.md de la skill que activa · una skill combina MCP + scripts + sub-skills + subagentes · los subagentes devuelven síntesis.</text>
+</svg>
