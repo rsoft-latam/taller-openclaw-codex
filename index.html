@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café del Mar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#bienvenida" aria-label="Café del Mar inicio">Café del Mar</a>
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#menu">Menu</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero js-carousel" id="bienvenida" aria-label="Carrusel de bienvenida" tabindex="0">
+      <div class="hero-slide hero-slide-one js-slide is-active">
+        <div class="hero-content">
+          <p class="eyebrow">Café fresco junto a la brisa</p>
+          <h1>Bienvenido a Café del Mar</h1>
+          <p>
+            Un rincón cálido para empezar la mañana, hacer una pausa tranquila
+            o compartir una merienda con sabor artesanal.
+          </p>
+          <a class="button" href="#menu">Ver menu</a>
+        </div>
+      </div>
+
+      <div class="hero-slide hero-slide-two js-slide">
+        <div class="hero-content">
+          <p class="eyebrow">Pausas con sabor</p>
+          <h1>Café artesanal para cada momento</h1>
+          <p>
+            Bebidas preparadas al instante, pan fresco y un ambiente pensado
+            para conversar, trabajar o descansar.
+          </p>
+          <a class="button" href="#menu">Ver menu</a>
+        </div>
+      </div>
+
+      <div class="hero-slide hero-slide-three js-slide">
+        <div class="hero-content">
+          <p class="eyebrow">Hecho con calma</p>
+          <h1>Tu mesa cerca del mar</h1>
+          <p>
+            Disfruta desayunos, meriendas y café de especialidad en un espacio
+            luminoso, cálido y acogedor.
+          </p>
+          <a class="button" href="#contacto">Visitanos</a>
+        </div>
+      </div>
+
+      <div class='hero-slide js-slide hero-slide-promo' aria-label='Promo Día de la Madre'></div>
+
+      <button class="carousel-control hero-control prev js-prev" type="button" aria-label="Bienvenida anterior">‹</button>
+      <button class="carousel-control hero-control next js-next" type="button" aria-label="Bienvenida siguiente">›</button>
+
+      <div class="carousel-dots hero-dots" aria-label="Seleccionar bienvenida">
+        <button class="js-dot is-active" type="button" aria-label="Mostrar bienvenida 1" aria-current="true"></button>
+        <button class="js-dot" type="button" aria-label="Mostrar bienvenida 2"></button>
+        <button class="js-dot" type="button" aria-label="Mostrar bienvenida 3"></button>
+        <button class='js-dot' type='button' aria-label='Mostrar promo Día de la Madre'></button>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">Nuestra seleccion</p>
+        <h2>Menu de la casa</h2>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-item">
+          <div>
+            <h3>Latte del Mar</h3>
+            <p>Espresso suave con leche cremosa y toque de vainilla.</p>
+          </div>
+          <strong>$4.50</strong>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <h3>Croissant de Almendra</h3>
+            <p>Hojaldre dorado relleno con crema ligera de almendra.</p>
+          </div>
+          <strong>$3.80</strong>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <h3>Cold Brew Citrus</h3>
+            <p>Cafe frio de extraccion lenta con notas de naranja.</p>
+          </div>
+          <strong>$4.90</strong>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <h3>Tostada Mediterranea</h3>
+            <p>Pan rustico, queso fresco, tomate, albahaca y aceite de oliva.</p>
+          </div>
+          <strong>$6.20</strong>
+        </article>
+
+        <article class="menu-item">
+          <div>
+            <h3>Té Chai</h3>
+            <p>Mezcla especiada con leche cremosa y aroma cálido.</p>
+          </div>
+          <strong>$3.50</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div>
+      <h2>Café del Mar</h2>
+      <p>Sabores cálidos, pausas simples y cafe preparado con cuidado.</p>
+    </div>
+    <address>
+      <span><strong>Horario:</strong> Lun a Sab, 8:00 AM - 8:00 PM</span>
+      <span><strong>Direccion:</strong> Av. Costa Azul 124, Miramar</span>
+      <span><strong>Telefono:</strong> (555) 123-4567</span>
+    </address>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
